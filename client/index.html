@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel = "stylesheet" href="./resources/index.css">
+    <title>Big Al's Playlist</title>
+  </head>
+  <body onload = "handleOnLoad()"> 
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Playlist</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Song Info</a>
+            </li>
+            
+          </ul>
+        </div>
+      </nav>
+
+    <div class="p-5 mb-4 text-light bg-danger">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold">Big Al's Playlist</h1> 
+          <p class="col-md-8 fs-4">Welcome to Big Al's Playlist for Bryant Denny Stadium!</p>
+          <center><image id="bigAlStadium" src="./resources/images/bigAl.jpeg"></image></center>
+          
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1><center>Playlist</center></h1>
+                <center><div id="listbox"></div></center>
+            </div>
+            <div class="col-md-6">
+                <h1><center>Song Info</center></h1>
+                <form onsubmit = "false;" method = "post">
+                    <center><label for = "songTitle">Title:</label>
+                    <input type="text" id="songTitle" name="title" readonly>
+                    <br><br></center>
+                    <center><label for = "songDeleted">Deleted:</label>
+                    <input type="text" id="songDeleted" name="deleted" readonly>
+                    <br><br></center>
+                    <center><label for = "songFavorited">Favorited:</label>
+                    <input type="text" id="songFavorited" name="favorited" readonly>
+                    <br><br></center>
+                    <center><button type "button">Update</button><button type "button">Delete</button><button type "button">Favorite</button></center>
+                    
+                </form>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src = "./scripts/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  </body>
+</html>
